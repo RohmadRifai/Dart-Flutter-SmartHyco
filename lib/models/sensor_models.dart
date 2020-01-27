@@ -1,12 +1,6 @@
 import 'dart:convert';
 
 class Sensor {
-  int ppm;
-  int ph;
-  int suhuAir;
-  int suhuUdara;
-  int kelembapan;
-
   Sensor({
     this.ppm,
     this.ph,
@@ -17,20 +11,27 @@ class Sensor {
 
   factory Sensor.fromJson(Map<String, dynamic> map) {
     return Sensor(
-        ppm: map["data_ppm"],
-        ph: map["data_ph"],
-        suhuAir: map["data_water_temp"],
-        suhuUdara: map["data_air_temp"],
-        kelembapan: map["data_humidity"]);
+      ppm: double.parse(map['data_ppm'].toString()),
+      ph: double.parse(map['data_ph'].toString()),
+      suhuAir: double.parse(map['data_water_temp'].toString()),
+      suhuUdara: double.parse(map['data_air_temp'].toString()),
+      kelembapan: double.parse(map['data_humidity'].toString()),
+    );
   }
+
+  double ppm;
+  double ph;
+  double suhuAir;
+  double suhuUdara;
+  double kelembapan;
 
   Map<String, dynamic> toJson() {
     return {
-      "data_ppm": ppm,
-      "data_ph": ph,
-      "data_water_temp": suhuAir,
-      "data_air_temp": suhuAir,
-      "data_humidity": kelembapan
+      'data_ppm': ppm,
+      'data_ph': ph,
+      'data_water_temp': suhuAir,
+      'data_air_temp': suhuAir,
+      'data_humidity': kelembapan
     };
   }
 
@@ -41,11 +42,9 @@ class Sensor {
 }
 
 List<Sensor> sensorFromJson(String jsonData) {
-  final data = json.decode(jsonData);
-  return List<Sensor>.from(data.map((item) => Sensor.fromJson(item)));
+  return json.decode(jsonData) as List<Sensor>;
 }
 
 String sensorToJson(Sensor data) {
-  final jsonData = data.toJson();
-  return json.encode(jsonData);
+  return json.encode(data);
 }
