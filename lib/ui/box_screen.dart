@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:smarthyco/models/box_models.dart';
 
 class BoxScreen extends StatefulWidget {
-  final Boxs boxs;
-
   BoxScreen({this.boxs});
+
+  final Boxs boxs;
 
   @override
   _BoxScreenState createState() => _BoxScreenState();

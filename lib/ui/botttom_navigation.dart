@@ -11,7 +11,7 @@ class BottomNavigation extends StatelessWidget {
     return Scaffold(
       body: ChangeNotifierProvider<BottomNavigationBarProvider>(
         child: BottomNavigationBarExample(),
-        builder: (BuildContext context) => BottomNavigationBarProvider(),
+        create: (BuildContext context) => BottomNavigationBarProvider(),
       ),
     );
   }
@@ -47,10 +47,10 @@ class _BottomNavigationBarExampleState
         backgroundColor: Colors.transparent,
         elevation: 0.0,
       ),
-      body: currentTab[provider.currentIndex],
+      body: currentTab[int.parse(provider.currentIndex.toString())],
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: provider.currentIndex,
-        onTap: (index) {
+        currentIndex: int.parse(provider.currentIndex.toString()),
+        onTap: (int index) {
           provider.currentIndex = index;
         },
         selectedItemColor: Theme.of(context).primaryColor,
@@ -59,23 +59,23 @@ class _BottomNavigationBarExampleState
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            title: Text('Beranda'),
+            title: const Text('Beranda'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.layers),
-            title: Text('Komoditas'),
+            title: const Text('Komoditas'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.work),
-            title: Text('Miteq'),
+            title: const Text('Miteq'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.input),
-            title: Text('Supply'),
+            title: const Text('Supply'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_circle),
-            title: Text('Akun'),
+            title: const Text('Akun'),
           ),
         ],
       ),
@@ -85,7 +85,7 @@ class _BottomNavigationBarExampleState
 
 class BottomNavigationBarProvider with ChangeNotifier {
   int _currentIndex = 0;
-  get currentIndex => _currentIndex;
+  int get currentIndex => _currentIndex;
   set currentIndex(int index) {
     _currentIndex = index;
     notifyListeners();

@@ -11,15 +11,15 @@ class _SemuaKolamState extends State<SemuaKolam> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 10, top: 10, right: 10),
+      padding: const EdgeInsets.only(left: 10, top: 10, right: 10),
       child: Container(
         height: double.infinity,
         //color: Colors.blue,
         child: ListView.builder(
-          physics: NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           itemCount: lahans.length,
           itemBuilder: (BuildContext context, int index) {
-            Lahan lahan = lahans[index];
+            final Lahan lahan = lahans[index];
             return Container(
               //margin: EdgeInsets.only(bottom: 10),
               //color: Colors.red,
@@ -34,7 +34,7 @@ class _SemuaKolamState extends State<SemuaKolam> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Padding(
-                            padding: EdgeInsets.only(bottom: 2),
+                            padding: const EdgeInsets.only(bottom: 2),
                             child: Text(
                               lahan.lahanjenisTanaman,
                               style: TextStyle(
@@ -45,7 +45,7 @@ class _SemuaKolamState extends State<SemuaKolam> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(bottom: 2),
+                            padding: const EdgeInsets.only(bottom: 2),
                             child: Text(
                               lahan.masaTanam,
                               style: TextStyle(
@@ -61,12 +61,12 @@ class _SemuaKolamState extends State<SemuaKolam> {
                             percent: lahan.persentase,
                             progressColor: Colors.blue,
                             //backgroundColor: Colors.white,
-                            padding: EdgeInsets.only(left: 5),
+                            padding: const EdgeInsets.only(left: 5),
                           ),
                         ],
                       ),
                       Padding(
-                        padding: EdgeInsets.only(right: 1),
+                        padding: const EdgeInsets.only(right: 1),
                         child: OutlineButton(
                           onPressed: () => print('Tekan Detail'),
                           borderSide: BorderSide(

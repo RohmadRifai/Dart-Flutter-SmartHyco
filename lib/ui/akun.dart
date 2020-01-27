@@ -12,7 +12,7 @@ class _AkunState extends State<Akun> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -24,7 +24,7 @@ class _AkunState extends State<Akun> {
                   fontSize: 22,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Text(
@@ -34,10 +34,10 @@ class _AkunState extends State<Akun> {
                   fontWeight: FontWeight.w400,
                 ),
               ),
-              TextField(
+              const TextField(
                 decoration: InputDecoration(hintText: 'nama'),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Text(
@@ -47,10 +47,10 @@ class _AkunState extends State<Akun> {
                   fontWeight: FontWeight.w400,
                 ),
               ),
-              TextField(
+              const TextField(
                 decoration: InputDecoration(hintText: 'email'),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Text(
@@ -60,10 +60,10 @@ class _AkunState extends State<Akun> {
                   fontWeight: FontWeight.w400,
                 ),
               ),
-              TextField(
+              const TextField(
                 decoration: InputDecoration(hintText: 'kata sandi'),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Text(
@@ -73,10 +73,10 @@ class _AkunState extends State<Akun> {
                   fontWeight: FontWeight.w400,
                 ),
               ),
-              TextField(
+              const TextField(
                 decoration: InputDecoration(hintText: 'no. handphone'),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Row(
@@ -86,8 +86,10 @@ class _AkunState extends State<Akun> {
                     //height: 100,
                     width: 150,
                     child: FlatButton(
-                      onPressed: () => Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Login())),
+                      onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute<dynamic>(
+                              builder: (BuildContext context) => Login())),
                       color: Theme.of(context).accentColor,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)),
@@ -97,15 +99,17 @@ class _AkunState extends State<Akun> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   SizedBox(
                     //height: 100,
                     width: 150,
                     child: FlatButton(
-                      onPressed: () => Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Login())),
+                      onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute<dynamic>(
+                              builder: (BuildContext context) => Login())),
                       color: Theme.of(context).accentColor,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)),

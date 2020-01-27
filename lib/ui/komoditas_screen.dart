@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:smarthyco/models/komoditas_models.dart';
 
 class KomoditasScreen extends StatefulWidget {
-  final Komoditass komoditass;
-
   KomoditasScreen({this.komoditass});
+
+  final Komoditass komoditass;
 
   @override
   _KomoditasScreenState createState() => _KomoditasScreenState();
@@ -25,14 +25,14 @@ class _KomoditasScreenState extends State<KomoditasScreen> {
                   boxShadow: [
                     BoxShadow(
                         color: Colors.black26,
-                        offset: Offset(0, 2),
+                        offset: const Offset(0, 2),
                         blurRadius: 6),
                   ],
                 ),
                 child: Hero(
                   tag: widget.komoditass.imageUrl,
                   child: ClipRRect(
-                    borderRadius: BorderRadius.only(
+                    borderRadius: const BorderRadius.only(
                         bottomLeft: Radius.circular(30),
                         bottomRight: Radius.circular(30)),
                     child: Image(
@@ -43,7 +43,7 @@ class _KomoditasScreenState extends State<KomoditasScreen> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 30),
+                padding: const EdgeInsets.symmetric(vertical: 30),
                 child: IconButton(
                   icon: Icon(Icons.arrow_back),
                   color: Colors.black,
@@ -52,7 +52,7 @@ class _KomoditasScreenState extends State<KomoditasScreen> {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Container(
@@ -81,7 +81,7 @@ class _KomoditasScreenState extends State<KomoditasScreen> {
                         Icons.av_timer,
                         size: 18,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 3,
                       ),
                       Text(
@@ -98,7 +98,7 @@ class _KomoditasScreenState extends State<KomoditasScreen> {
                           //fontSize: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 103,
                       ),
                       Text(
@@ -108,7 +108,7 @@ class _KomoditasScreenState extends State<KomoditasScreen> {
                           fontSize: 18,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 3,
                       ),
                       Text(

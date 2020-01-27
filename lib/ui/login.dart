@@ -9,28 +9,28 @@ class Login extends StatelessWidget {
       body: SingleChildScrollView(
         child: Center(
           child: Padding(
-            padding: EdgeInsets.all(25),
+            padding: const EdgeInsets.all(25),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Image(
+                const Image(
                   image: AssetImage('assets/logo/logo.png'),
                   height: 200,
                   width: 200,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                TextField(
+                const TextField(
                   decoration: InputDecoration(hintText: 'Masukan Email'),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
-                TextField(
+                const TextField(
                   decoration: InputDecoration(hintText: 'Masukan Kata Sandi'),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 SizedBox(
@@ -38,8 +38,9 @@ class Login extends StatelessWidget {
                   child: OutlineButton(
                     onPressed: () => Navigator.push(
                         context,
-                        MaterialPageRoute(
-                            builder: (context) => BottomNavigation())),
+                        MaterialPageRoute<dynamic>(
+                            builder: (BuildContext context) =>
+                                BottomNavigation())),
                     borderSide: BorderSide(
                       color: Theme.of(context).accentColor,
                       width: 2,
@@ -56,8 +57,10 @@ class Login extends StatelessWidget {
                   //height: 100,
                   width: 300,
                   child: FlatButton(
-                    onPressed: () => Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => LoginDaftar())),
+                    onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute<dynamic>(
+                            builder: (BuildContext context) => LoginDaftar())),
                     color: Theme.of(context).accentColor,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),

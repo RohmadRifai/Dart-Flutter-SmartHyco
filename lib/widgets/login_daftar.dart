@@ -26,22 +26,22 @@ class _LoginDaftarState extends State<LoginDaftar> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           child: Column(
             children: <Widget>[
-              TextField(
+              const TextField(
                 decoration: InputDecoration(hintText: 'Nama'),
               ),
-              TextField(
+              const TextField(
                 decoration: InputDecoration(hintText: 'Email'),
               ),
-              TextField(
+              const TextField(
                 decoration: InputDecoration(hintText: 'Kata Sandi'),
               ),
-              TextField(
+              const TextField(
                 decoration: InputDecoration(hintText: 'No. Handphone'),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 300,
               ),
               SizedBox(
@@ -50,8 +50,9 @@ class _LoginDaftarState extends State<LoginDaftar> {
                 child: FlatButton(
                   onPressed: () => Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => BottomNavigation())),
+                      MaterialPageRoute<dynamic>(
+                          builder: (BuildContext context) =>
+                              BottomNavigation())),
                   color: Theme.of(context).accentColor,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),

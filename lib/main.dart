@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.green,
         accentColor: Colors.green,
-        scaffoldBackgroundColor: Color(0xFFF3F5F7),
+        scaffoldBackgroundColor: const Color(0xFFF3F5F7),
         //accentColor: Colors.greenAccent,
       ),
       debugShowCheckedModeBanner: false,

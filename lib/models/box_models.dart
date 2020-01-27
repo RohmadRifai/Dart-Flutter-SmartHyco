@@ -1,12 +1,4 @@
 class Boxs {
-  String namaBox;
-  int ppm;
-  int ph;
-  int suhuAir;
-  int suhuUdara;
-  int kelembapan;
-  String kualitasAir;
-
   Boxs({
     this.namaBox,
     this.ppm,
@@ -16,9 +8,17 @@ class Boxs {
     this.kelembapan,
     this.kualitasAir,
   });
+
+  String namaBox;
+  int ppm;
+  int ph;
+  int suhuAir;
+  int suhuUdara;
+  int kelembapan;
+  String kualitasAir;
 }
 
-final List<Boxs> boxs = [
+final List<Boxs> boxs = <Boxs>[
   Boxs(
     namaBox: 'Box 1',
     ppm: 200,

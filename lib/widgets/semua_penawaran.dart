@@ -10,14 +10,14 @@ class _SemuaPenawaranState extends State<SemuaPenawaran> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 10, top: 10, right: 10),
+      padding: const EdgeInsets.only(left: 10, top: 10, right: 10),
       child: Container(
         height: double.infinity,
         //color: Colors.blue,
         child: ListView.builder(
           itemCount: supplies.length,
           itemBuilder: (BuildContext context, int index) {
-            Supply supply = supplies[index];
+            final Supply supply = supplies[index];
             return Container(
               //margin: EdgeInsets.only(bottom: 10),
               //color: Colors.red,
@@ -32,7 +32,7 @@ class _SemuaPenawaranState extends State<SemuaPenawaran> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Padding(
-                            padding: EdgeInsets.only(bottom: 2),
+                            padding: const EdgeInsets.only(bottom: 2),
                             child: Text(
                               supply.jenisLobster,
                               style: TextStyle(
@@ -43,7 +43,7 @@ class _SemuaPenawaranState extends State<SemuaPenawaran> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(bottom: 2),
+                            padding: const EdgeInsets.only(bottom: 2),
                             child: Text(
                               supply.berat,
                               style: TextStyle(
@@ -64,7 +64,7 @@ class _SemuaPenawaranState extends State<SemuaPenawaran> {
                         ],
                       ),
                       Padding(
-                        padding: EdgeInsets.only(right: 1),
+                        padding: const EdgeInsets.only(right: 1),
                         child: OutlineButton(
                           onPressed: () => print('Tekan Supply'),
                           borderSide: BorderSide(

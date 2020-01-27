@@ -1,10 +1,4 @@
 class Komoditass {
-  String imageUrl;
-  String namaTanaman;
-  String deskripsi;
-  int lamaTanam;
-  int harga;
-
   Komoditass({
     this.imageUrl,
     this.namaTanaman,
@@ -12,6 +6,12 @@ class Komoditass {
     this.lamaTanam,
     this.harga,
   });
+
+  String imageUrl;
+  String namaTanaman;
+  String deskripsi;
+  int lamaTanam;
+  int harga;
 }
 
 final List<Komoditass> komoditas = [

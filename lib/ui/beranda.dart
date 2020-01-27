@@ -8,7 +8,7 @@ class Beranda extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: ListView(
-          padding: EdgeInsets.symmetric(vertical: 5.0),
+          padding: const EdgeInsets.symmetric(vertical: 5.0),
           children: <Widget>[
             PenawaranSupply(),
             ListLahan(),
