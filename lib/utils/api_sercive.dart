@@ -8,8 +8,10 @@ class ApiService {
 
   Future<List<Sensor>> getSensor() async {
     //final response = await client.get("$baseUrl/sensor");
-    http.Response response = await http.get(Uri.encodeFull("$baseUrl/sensor"),
-        headers: {"Accept": "application/json"});
+    final http.Response response = await http.get(
+      Uri.encodeFull('$baseUrl/sensor'),
+      headers: <String, String>{'Accept': 'application/json'},
+    );
     return sensorFromJson(response.body);
     // if (response.statusCode == 200) {
     //   return sensorFromJson(response.body);

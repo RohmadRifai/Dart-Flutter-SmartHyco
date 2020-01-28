@@ -16,18 +16,18 @@ class _SemuaKomoditasState extends State<SemuaKomoditas> {
       child: ListView.builder(
         itemCount: komoditas.length,
         itemBuilder: (BuildContext context, int index) {
-          Komoditass komoditass = komoditas[index];
+          final Komoditass komoditass = komoditas[index];
           return GestureDetector(
             onTap: () => Navigator.push(
               context,
-              MaterialPageRoute(
+              MaterialPageRoute<dynamic>(
                 builder: (_) => KomoditasScreen(
                   komoditass: komoditass,
                 ),
               ),
             ),
             child: Container(
-              margin: EdgeInsets.all(10),
+              margin: const EdgeInsets.all(10),
               height: 270,
               //color: Colors.red,
               child: Stack(
@@ -43,7 +43,7 @@ class _SemuaKomoditasState extends State<SemuaKomoditas> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.all(10.0),
+                        padding: const EdgeInsets.all(10.0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.end,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,7 +55,7 @@ class _SemuaKomoditasState extends State<SemuaKomoditas> {
                                 fontSize: 22,
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 3,
                             ),
                             Row(
@@ -64,7 +64,7 @@ class _SemuaKomoditasState extends State<SemuaKomoditas> {
                                   Icons.av_timer,
                                   size: 18,
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 3,
                                 ),
                                 Text(
@@ -81,7 +81,7 @@ class _SemuaKomoditasState extends State<SemuaKomoditas> {
                                     //fontSize: 20,
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 103,
                                 ),
                                 Text(
@@ -91,7 +91,7 @@ class _SemuaKomoditasState extends State<SemuaKomoditas> {
                                     fontSize: 18,
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 3,
                                 ),
                                 Text(
@@ -121,7 +121,7 @@ class _SemuaKomoditasState extends State<SemuaKomoditas> {
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black26,
-                          offset: Offset(0, 2),
+                          offset: const Offset(0, 2),
                           blurRadius: 6,
                         )
                       ],

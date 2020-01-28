@@ -11,7 +11,7 @@ class _PenawaranSupplyState extends State<PenawaranSupply> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(
+      padding: const EdgeInsets.only(
         left: 10.0,
         right: 10,
       ),
@@ -44,7 +44,7 @@ class _PenawaranSupplyState extends State<PenawaranSupply> {
               GestureDetector(
                 onTap: () => Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  MaterialPageRoute<dynamic>(
                     builder: (_) => PenawaranScreen(),
                   ),
                 ),
@@ -56,15 +56,15 @@ class _PenawaranSupplyState extends State<PenawaranSupply> {
             ],
           ),
           Padding(
-            padding: EdgeInsets.only(top: 10),
+            padding: const EdgeInsets.only(top: 10),
             child: Container(
               height: 180,
               //color: Colors.blue,
               child: ListView.builder(
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 itemCount: 3,
                 itemBuilder: (BuildContext context, int index) {
-                  Supply supply = supplies[index];
+                  final Supply supply = supplies[index];
                   return Container(
                     //margin: EdgeInsets.only(bottom: 10),
                     //color: Colors.red,
@@ -79,7 +79,7 @@ class _PenawaranSupplyState extends State<PenawaranSupply> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
                                 Padding(
-                                  padding: EdgeInsets.only(bottom: 2),
+                                  padding: const EdgeInsets.only(bottom: 2),
                                   child: Text(
                                     supply.jenisLobster,
                                     style: TextStyle(
@@ -90,7 +90,7 @@ class _PenawaranSupplyState extends State<PenawaranSupply> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.only(bottom: 2),
+                                  padding: const EdgeInsets.only(bottom: 2),
                                   child: Text(
                                     supply.berat,
                                     style: TextStyle(
@@ -111,7 +111,7 @@ class _PenawaranSupplyState extends State<PenawaranSupply> {
                               ],
                             ),
                             Padding(
-                              padding: EdgeInsets.only(right: 1),
+                              padding: const EdgeInsets.only(right: 1),
                               child: OutlineButton(
                                 onPressed: () => print('Tekan Supply'),
                                 borderSide: BorderSide(

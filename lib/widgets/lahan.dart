@@ -12,7 +12,7 @@ class _ListLahanState extends State<ListLahan> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 10.0, right: 10, top: 20),
+      padding: const EdgeInsets.only(left: 10.0, right: 10, top: 20),
       child: Column(
         children: <Widget>[
           Row(
@@ -42,7 +42,7 @@ class _ListLahanState extends State<ListLahan> {
               GestureDetector(
                 onTap: () => Navigator.push(
                     context,
-                    MaterialPageRoute(
+                    MaterialPageRoute<dynamic>(
                       builder: (_) => KolamScreen(),
                     )),
                 child: Icon(
@@ -53,15 +53,15 @@ class _ListLahanState extends State<ListLahan> {
             ],
           ),
           Padding(
-            padding: EdgeInsets.only(top: 10),
+            padding: const EdgeInsets.only(top: 10),
             child: Container(
               height: 190,
               //color: Colors.blue,
               child: ListView.builder(
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 itemCount: 3,
                 itemBuilder: (BuildContext context, int index) {
-                  Lahan lahan = lahans[index];
+                  final Lahan lahan = lahans[index];
                   return Container(
                     //margin: EdgeInsets.only(bottom: 10),
                     //color: Colors.red,
@@ -76,7 +76,7 @@ class _ListLahanState extends State<ListLahan> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
                                 Padding(
-                                  padding: EdgeInsets.only(bottom: 2),
+                                  padding: const EdgeInsets.only(bottom: 2),
                                   child: Text(
                                     lahan.lahanjenisTanaman,
                                     style: TextStyle(
@@ -87,7 +87,7 @@ class _ListLahanState extends State<ListLahan> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.only(bottom: 2),
+                                  padding: const EdgeInsets.only(bottom: 2),
                                   child: Text(
                                     lahan.masaTanam,
                                     style: TextStyle(
@@ -103,12 +103,12 @@ class _ListLahanState extends State<ListLahan> {
                                   percent: lahan.persentase,
                                   progressColor: Colors.green,
                                   //backgroundColor: Colors.white,
-                                  padding: EdgeInsets.only(left: 5),
+                                  padding: const EdgeInsets.only(left: 5),
                                 ),
                               ],
                             ),
                             Padding(
-                              padding: EdgeInsets.only(right: 1),
+                              padding: const EdgeInsets.only(right: 1),
                               child: OutlineButton(
                                 onPressed: () => print('Tekan Detail'),
                                 borderSide: BorderSide(
